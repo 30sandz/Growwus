@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat with AI</title>
+    <title>Growwus</title>
     <link rel="stylesheet" href="../style/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
@@ -27,7 +27,7 @@
             position: fixed;
             bottom: 5vh;
         }
-        .user{
+        .user, .sys{
             font-family: "Lato", sans-serif;
             font-weight: 500;
             font-style: normal;
@@ -41,19 +41,17 @@
     <h1 style="padding: 0vh 5vw;border;">Growwus - Your producitvity AI</h1>
     <div class="box">
         <div class="text">
-            <strong class="str">You:  </strong><p class="user">hello</p>
-            <strong class="str">Growwus:  </strong><p class="sys">HOIII</p>
             {% for element in messages%}
                 {% if element['role'] == "user" %}
-                <p><strong>You:  </strong>{{element['content']}}</p>
+                <strong class="str">You:  </strong><p class="user">{{element['content']}}</p>
                 {% endif %}
                 {% if element['role'] == "system" %}
-                <p><strong>Growwus:  </strong>{{element['content']}}</p><br>
+                <strong class="str">Growwus:  </strong><p class="sys">{{element['content']}}</p><br>
                 {% endif %}
             {% endfor %}
         </div>
     </div>
-    <form action="/ask" method="" class="form">
+    <form action="/ask" method="POST" class="form">
         <input type="text" name="user_input" placeholder="   Ask something..." style="width: 40vw;height: 4.5vh;border-radius: 10px;border: rgb(155, 155, 155);"> &nbsp;
         <input type="submit" value="Send" style="width: 4vw;border-radius: 5px;border: rgb(155, 155, 155);">
     </form>

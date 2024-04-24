@@ -19,29 +19,25 @@ def home():
 def ask():
     user_input = request.form['user_input']
     if user_input : 
-        # Format user input as a message
+
         user_message = {"role": "user", "content": user_input}
-        # Append user message to messages array
+
         messages.append(user_message)
 
-        # Call OpenAI API with messages array
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=messages,  # Pass the messages array
-            max_tokens=1,
-            temperature=0.6,
-            top_p=0.6,
+            messages=messages,
+            max_tokens=300,
+            temperature=0.7,
             n=1,
         )
 
-        # Get the response message from the API
         response_text = response.choices[0].message.content
 
-        # Append AI response to messages array
         ai_message = {"role": "system", "content": response_text}
         messages.append(ai_message)
 
-    # Render the response in the chat interface
+
     return render_template('index.html',messages=messages)
 
 if __name__ == '__main__':
