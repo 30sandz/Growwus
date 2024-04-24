@@ -30,6 +30,5 @@ while True:
     reply = chat.choices[0].message.content
 
     print(f"ChatGPT: {reply}")
-    print(f"ChatGPT:2 {reply2}")
     messages.append({"role": "assistant", "content": reply})
 

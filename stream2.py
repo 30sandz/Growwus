@@ -24,27 +24,24 @@ def main():
     st.title("Growwus")
 
     # Displaying introduction text
-    st.write("Welcome  the Growwus conversation!")
-    leng = len(messages)
-    for element in messages:
-        st.write(element["role"])
-        st.write(element["content"])
+    st.write("Welcome to the Growwus conversation!")
 
-    chat()
+    # List to store all user inputs
+    user_inputs = []
 
-def chat():
+    # Text input field for user to enter messages
     user_input = st.text_input("User:")
+    st.write(user_input)
 
     # Checking if user has entered a message
     if user_input:
-        
         # Appending user's message to conversation history
-        messages.append({"role": "user", "content": user_input})
+        user_inputs.append(user_input)
 
         # Generating AI assistant's reply
         chat = client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=messages,
+            messages=messages + [{"role": "user", "content": msg} for msg in user_inputs],
             temperature=1.0,
             top_p=0.6,
             n=1,
@@ -60,7 +57,6 @@ def chat():
 
         # Appending AI assistant's reply to conversation history
         messages.append({"role": "assistant", "content": reply})
-
 
 # Running the Streamlit app
 if __name__ == "__main__":
