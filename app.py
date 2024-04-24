@@ -27,7 +27,7 @@ def ask():
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=messages,
-            max_tokens=300,
+            max_tokens=2000,
             temperature=0.7,
             n=1,
         )
