@@ -12,13 +12,15 @@
             left: 30vw;
         }
         .box {
+            
             display: flex;
             justify-content: center;
             height: 80vh;
         }
         .text {
+            background: #231f1f;
+            color: white;
             border-radius: 15px;
-            background: whitesmoke;
             overflow-y:scroll;
             scrollbar-width: none;
             width: 40vw;
@@ -48,7 +50,7 @@
         }
 
     .logo {
-        width: 12vw;
+        width:12vw;
         position: absolute;
         top: -5vh;
         left: 25px;
