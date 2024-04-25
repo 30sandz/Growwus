@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+        body{
+            color-scheme: dark;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Set background color to white */
+            color: #000000; /* Set text color to black */
+        }
+        .h {
+            position: relative;
+            left: 30vw;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            height: 80vh;
+        }
+        .text {
+            width: 40vw;
+            padding: 4vh 5vw;
+        }
+        .form{
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            position: fixed;
+            bottom: 5vh;
+        }
+        .user, .sys{
+            font-family: "Lato", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 2vh;
+        }.str{
+            font-size: 1.8vh;
+        }
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff; /* Set background color to white */
+        color: #000000; /* Set text color to black */
+        }
+
+    .logo {
+        width: 10vw;
+        position: absolute;
+        top: -3vh;
+        left: 20px;
+    }
+
+    /* Style links */
+    a {
+        color: #4F80FF; /* Set link color to the theme color */
+        text-decoration: none; /* Remove default underline */
+    }
+
+    a:hover {
+        text-decoration: underline; /* Add underline on hover */
+    }
+
+    /* Style buttons */
+    .button {
+        background-color: #4F80FF; /* Set button background color to the theme color */
+        color: #ffffff; /* Set button text color to white */
+        padding: 10px 20px; /* Add padding to the button */
+        border: none; /* Remove button border */
+        border-radius: 5px; /* Add border radius to the button */
+        cursor: pointer; /* Change cursor to pointer on hover */
+    }
+
+    .button:hover {
+        background-color: #3c6bdb; /* Darken button color on hover */
+    }

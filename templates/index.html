@@ -4,41 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Growwus</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-        body{
-            color: white;
-            background: #131212;
-        }
-        .box {
-            display: flex;
-            justify-content: center;
-            height: 80vh;
-        }
-        .text {
-            width: 40vw;
-            padding: 4vh 5vw;
-        }
-        .form{
-            display: flex;
-            justify-content: center;
-            width: 100vw;
-            position: fixed;
-            bottom: 5vh;
-        }
-        .user, .sys{
-            font-family: "Lato", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-            font-size: 2vh;
-        }.str{
-            font-size: 1.8vh;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style/style.css') }}">
 </head>
 <body>
-    <h1 style="padding: 0vh 5vw;">Growwus - Your producitvity AI</h1>
+    <h1 style="padding: 2vh 5vw; width: 50vw;" class="h">Growwus - Your producitvity AI</h1>
+    <img src="{{ url_for('static', filename='/style/img/img.png') }}" class="logo" alt="Your Logo" class="logo">
     <div class="box">
         <div class="text">
             {% for element in messages%}
@@ -51,10 +21,20 @@
             {% endfor %}
         </div>
     </div>
-    <form action="/ask" method="POST" class="form">
+    <form method="POST" class="form" id="form">
         <input type="text" name="user_input" placeholder="   Ask something..." style="width: 40vw;height: 4.5vh;border-radius: 10px;border: rgb(155, 155, 155);"> &nbsp;
         <input type="submit" value="Send" style="width: 4vw;border-radius: 5px;border: rgb(155, 155, 155);">
     </form>
+
+    <script>
+        function setf(){
+            var num = Math.floor(Math.random()*9000)+1000;
+            document.getElementById("form").action = "/ask/"+num;
+        }
+        window.onload = function(){
+                setf();
+            };
+    </script>
 
 </body>
 

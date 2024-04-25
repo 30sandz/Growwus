@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from openai import OpenAI
+import random
 
 app = Flask(__name__)
 
@@ -13,10 +14,11 @@ messages = [
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    num = random.randint(1000,9999)
+    return render_template('index.html', num=num)
 
-@app.route('/ask', methods=['POST'])
-def ask():
+@app.route('/ask/<int:num>', methods=['POST','GET'])
+def ask(num):
     user_input = request.form['user_input']
     if user_input : 
 
