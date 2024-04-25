@@ -36,6 +36,7 @@ def ask(num):
 
         response_text = response.choices[0].message.content
 
+
         ai_message = {"role": "system", "content": response_text}
         messages.append(ai_message)
 

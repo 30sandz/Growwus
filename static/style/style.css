@@ -15,8 +15,11 @@
             height: 80vh;
         }
         .text {
+            overflow-y:scroll;
+            scrollbar-width: none;
             width: 40vw;
             padding: 4vh 5vw;
+            height: 65vh;
         }
         .form{
             display: flex;
