@@ -14,8 +14,7 @@ messages = [
 
 @app.route('/')
 def home():
-    num = random.randint(1000,9999)
-    return render_template('index.html', num=num)
+    return render_template('index.html')
 
 @app.route('/ask/<int:num>', methods=['POST','GET'])
 def ask(num):
