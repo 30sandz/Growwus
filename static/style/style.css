@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
         body{
+            background-image: url(../style/img/bg.png);
             color-scheme: dark;
             font-family: Arial, sans-serif;
-            background-color: #ffffff; /* Set background color to white */
-            color: #000000; /* Set text color to black */
+            background-color: #ffffff;
+            color: #000000;
         }
         .h {
+            color: white;
             position: relative;
             left: 30vw;
         }
@@ -15,6 +17,8 @@
             height: 80vh;
         }
         .text {
+            border-radius: 15px;
+            background: whitesmoke;
             overflow-y:scroll;
             scrollbar-width: none;
             width: 40vw;
@@ -32,43 +36,42 @@
             font-family: "Lato", sans-serif;
             font-weight: 500;
             font-style: normal;
-            font-size: 2vh;
+            font-size: 2.4vh;
         }.str{
-            font-size: 1.8vh;
+            font-size: 2.3vh;
+
         }
         body {
         font-family: Arial, sans-serif;
-        background-color: #ffffff; /* Set background color to white */
-        color: #000000; /* Set text color to black */
+        background-color: #ffffff;
+        color: #000000; 
         }
 
     .logo {
-        width: 10vw;
+        width: 12vw;
         position: absolute;
-        top: -3vh;
-        left: 20px;
+        top: -5vh;
+        left: 25px;
     }
 
     /* Style links */
     a {
-        color: #4F80FF; /* Set link color to the theme color */
-        text-decoration: none; /* Remove default underline */
+        color: #4F80FF;
+        text-decoration: none;
     }
 
     a:hover {
-        text-decoration: underline; /* Add underline on hover */
+        text-decoration: underline;
     }
 
-    /* Style buttons */
     .button {
-        background-color: #4F80FF; /* Set button background color to the theme color */
-        color: #ffffff; /* Set button text color to white */
-        padding: 10px 20px; /* Add padding to the button */
-        border: none; /* Remove button border */
-        border-radius: 5px; /* Add border radius to the button */
-        cursor: pointer; /* Change cursor to pointer on hover */
+        background-color: #4F80FF; 
+        color: #ffffff;
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 5px;
+        cursor: pointer; 
     }
-
     .button:hover {
-        background-color: #3c6bdb; /* Darken button color on hover */
+        background-color: #3c6bdb;
     }
