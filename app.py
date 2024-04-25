@@ -9,7 +9,7 @@ api_key = 'sk-proj-FlmUvRw2jhvFApKi79mVT3BlbkFJI1TFLa2exEJlF8th83s4'
 client = OpenAI(api_key=api_key)
 
 messages = [
-    {"role": "assistant", "content": "You are a kind helpful assistant."},
+    {"role": "assistant", "content": "You are a kind helpful assistant"},
 ]
 
 @app.route('/')
