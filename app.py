@@ -4,7 +4,7 @@ import random
 
 app = Flask(__name__)
 
-api_key = 'sk-proj-FlmUvRw2jhvFApKi79mVT3BlbkFJI1TFLa2exEJlF8th83s4'
+api_key = ''
 
 client = OpenAI(api_key=api_key)
 
