@@ -1,16 +1,12 @@
 from flask import Flask, render_template, request
 from openai import OpenAI
 import random
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
-
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = "YOUR_OPENAI_API_KEY"
 
 app = Flask(__name__)
 
-client = OpenAI(api_key)
+client = OpenAI(api_key=api_key)
 
 messages = [
     {"role": "assistant", "content": "You are a kind helpful assistant"},
