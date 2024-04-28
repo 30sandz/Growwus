@@ -10,7 +10,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 
 app = Flask(__name__)
 
-client = OpenAI(api_key=api_key)
+client = OpenAI(api_key)
 
 messages = [
     {"role": "assistant", "content": "You are a kind helpful assistant"},
