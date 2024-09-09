@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from openai import OpenAI
 import random
 
-api_key = "YOUR_OPENAI_API_KEY"
+api_key = "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"
 
 app = Flask(__name__)
 
