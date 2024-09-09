@@ -6,7 +6,14 @@ api_key = "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"
 
 app = Flask(__name__)
 
-client = OpenAI(api_key=api_key)
+#client = OpenAI(api_key=api_key)
+
+from groq import Groq
+
+client = Groq(
+    api_key=os.environ.get("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"),
+)
+
 
 messages = [
     {"role": "assistant", "content": "You are a kind helpful assistant"},
